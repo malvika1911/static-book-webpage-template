@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+  <header class="toolbar">
+    <h1>Chapter 1: Introduction</h1>
+    <button id="prevChapter" class="btn-primary" disabled>Previous</button>
+    <button id="nextChapter" class="btn-primary">Next</button>
+    <button id="logoutBtn" class="btn-secondary">Logout</button>
+    <button id="homeBtn" class="btn-secondary">Home</button>
+  </header>
+  <main>
+    <p>This is the content of Chapter 1. You can include the full content of the chapter here.</p>
+  </main>
+  <script>
+    document.getElementById('nextChapter').addEventListener('click', () => {
+      window.location.href = 'chapter2.html';
+    });
+    document.getElementById('prevChapter').addEventListener('click', () => {
+      // Disabled on chapter 1
+    });
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.clear();
+      window.location.href = 'index_final2.html';
+    });
+  </script>
+  <script>
+    document.getElementById('homeBtn').addEventListener('click', () => {
+      window.location.href = 'index_final2.html#book-section';
+    });
+  </script>
+</body>
+</html>

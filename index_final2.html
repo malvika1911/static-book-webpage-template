@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Book Reader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<body class="light-theme">
+  <!-- LOGIN SECTION -->
+  <section id="login-section" class="toolbar">
+    <h2>Login to Read</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+    <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+  </section>
+
+  <!-- SIGNUP SECTION -->
+  <section id="signup-section" class="toolbar" style="display: none;">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-username" placeholder="Username" />
+    <input type="password" id="signup-password" placeholder="Password" />
+    <button id="signup-btn">Sign Up</button>
+    <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+  </section>
+
+  <!-- BOOK SECTION (after login) -->
+  <section id="book-section" style="display: none;">
+    <header class="toolbar">
+      <h1>My Book Title</h1>
+      <div>
+        <button id="toggleTheme">Toggle Theme</button>
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toolbar">
+        <ul>
+          <li><a href="chapter1.html" class="nav-link" data-chapter="1">Chapter 1</a></li>
+          <li><a href="chapter2.html" class="nav-link" data-chapter="2">Chapter 2</a></li>
+          <li><a href="chapter3.html" class="nav-link" data-chapter="3">Chapter 3</a></li>
+          <li><a href="chapter4.html" class="nav-link" data-chapter="4">Chapter 4</a></li>
+          <li><a href="chapter5.html" class="nav-link" data-chapter="5">Chapter 5</a></li>
+        </ul>
+      </nav>      
+
+    <!-- Book Content -->
+    <main id="bookContent" class="book-content">
+    </main>
+
+    <!-- Additional content about DevOps below chapter links -->
+    <section id="devops-info" class="toolbar" style="margin-top: 20px;">
+      <h2>About DevOps</h2>
+      <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle and provide continuous delivery with high software quality.</p>
+      <img src="Devops1.jpeg" alt="DevOps Illustration" style="max-width: 100%; height: auto;" />
+    </section>
+
+    <!-- Navigation buttons -->
+  </section>
+
+  <script src="script_final3.js"></script>
+</body>
+</html>
